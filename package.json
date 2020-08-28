@@ -1,0 +1,35 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "nodejs-training",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon -r dotenv/config --exec babel-node ./bin/www",
+    "start": "babel-node ./bin/www",
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@root": ".",
+    "@models": "src/models",
+    "@modules": "src/modules"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "eslint": "^7.7.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.4",
+    "pg": "^8.3.3",
+    "sequelize": "^6.3.4",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
