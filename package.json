@@ -7,6 +7,9 @@
     "start:dev": "nodemon -r dotenv/config --exec babel-node ./bin/www",
     "start": "babel-node ./bin/www",
     "build": "babel src -d lib",
+    "db:migrate": "node -r dotenv/config node_modules/.bin/sequelize db:migrate",
+    "db:create": "node -r dotenv/config node_modules/.bin/sequelize db:create",
+    "db:drop": "node -r dotenv/config node_modules/.bin/sequelize db:drop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,7 +17,8 @@
   "_moduleAliases": {
     "@root": ".",
     "@models": "src/models",
-    "@modules": "src/modules"
+    "@modules": "src/modules",
+    "@services": "src/services"
   },
   "dependencies": {
     "@babel/cli": "^7.10.5",
